@@ -1,0 +1,32 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Mirza:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+}
+
+.navbar {
+  border-radius:0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background:url('footer_lodyas.png');
+}
+
+.navbar-inverse a.navbar-brand {
+  color: #2f73e0;
+  font-family: 'Mirza', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
