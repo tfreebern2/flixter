@@ -11,10 +11,10 @@ h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 700;
 }
 
 .navbar {
+  margin: 0;
   border-radius:0;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
@@ -29,4 +29,35 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
+}
+
+.hero {
+  background: url('owl.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.frosty {
+  background:rgba(0,0,0, 0.5);
+  color: white;
+}
+
+.frosty h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.frosty h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.btn {
+  border-radius:0;
 }
