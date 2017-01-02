@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 
+# Customization
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sprockets', '2.11.0'
 gem 'simple_form'
@@ -47,7 +48,8 @@ gem 'simple_form'
 # User Security
 gem 'devise'
 
-# Image Uploader
+# Image Uploader / Manipulators
 gem 'carrierwave', '~> 1.0'
 gem "figaro"
 gem "fog"
+gem 'mini_magick', '~> 4.3.1'
