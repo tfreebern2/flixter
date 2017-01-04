@@ -87,3 +87,14 @@ h1, h2, h3, h4, h5, h6 {
   padding:8px;
   margin: 10px;
 }
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.course-image {
+  max-width: 800px;
+  max-height: 350px;
+}
