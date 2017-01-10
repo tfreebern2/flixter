@@ -60,3 +60,4 @@ gem 'stripe'
 
 # Order of Lessons
 gem 'ranked-model'
+gem 'jquery-ui-rails'
