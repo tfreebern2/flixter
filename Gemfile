@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.9'
+gem 'rails', '>= 5.0.0.rc2', '< 5.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -42,7 +42,7 @@ gem 'rails_12factor', group: :production
 
 # Customization
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'sprockets', '2.11.0'
+gem 'sprockets'
 gem 'simple_form'
 
 # User Security
@@ -57,3 +57,6 @@ gem 'carrierwave-aws'
 
 # Payment Services
 gem 'stripe'
+
+# Order of Lessons
+gem 'ranked-model'
