@@ -5,6 +5,7 @@
       var lessonUrl = $(event.target).data('lesson-url'); 
       $('#newLessonForm').attr('action', lessonUrl);
     });
+
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
@@ -15,13 +16,14 @@
         });
       }
     });
+
     $('.sections').sortable({
-      update: function( event, ui) {
+      update: function( event, ui ) {
         $.ajax({
-          type: 'PUT', 
+          type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { section: { row_order_position: ui.item.inde() } }
+          data: { section: { row_order_position: ui.item.index() } }
         });
       }
     });
@@ -41,29 +43,27 @@
   <br class="clr" />
 
   <div class="text-center">
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
-  Add a new section...
-</button>
-</div>
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
+      Add a new section...
+    </button>
+  </div>
 
   <ul class="sections">
-    <!--Changed CODE HERE-->
     <% current_course.sections.rank(:row_order).each do |section| %>
-    <li>
-      <li data-update-url="<%= instructor_section_path(section) %>" class = "section-li">
-        <div class="header">
-          <span class="glyphicon glyphicon-list"></span>
-            <%= section.title %>
-        </div>
+    <li data-update-url="<%= instructor_section_path(section) %>" class = "section-li">
+      <div class="header">
+        <span class="glyphicon glyphicon-list"></span>
+        <%= section.title %>
+      </div>
 
-        <!-- Button trigger modal -->
-        <button class="btn btn-primary btn-sm pull-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
-          New Lesson...
-        </button>
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary btn-sm pull-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+        New Lesson...
+      </button>
 
-        <br class="clr" />
-        <br class="clr" />
+      <br class="clr" />
+      <br class="clr" />
 
         <ul class="lessons">
         <% section.lessons.rank(:row_order).each do |lesson| %>
@@ -85,11 +85,9 @@
           <% end %>
         </ul>
         <br class="clr" />
-    </li>
-  <% end %>
-</ul>
-
-
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <!-- Modal -->
